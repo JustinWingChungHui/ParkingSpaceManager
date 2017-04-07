@@ -1,0 +1,10 @@
+{
+    "body": "{\"title\":\"test title\",\"description\":\"test decription\",\"address1\":\"50 Villiers Street\",\"city\":\"Coventry\",\"postcode\":\"CV2 4HP\"}",
+    "requestContext": {
+        "authorizer": {
+            "claims": {
+                "sub": "USER-SUB-1234"
+            }
+        }
+    }
+}

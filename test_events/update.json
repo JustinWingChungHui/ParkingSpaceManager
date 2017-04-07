@@ -1,0 +1,13 @@
+{
+    "body": "{\"title\":\"new title\",\"description\":\"new decription\",\"address1\":\"50 Villiers Street\",\"city\":\"Coventry\",\"postcode\":\"CV2 4HP\",\"active\":\"true\"}",
+    "pathParameters": {
+        "id": "051fa8a0-1bde-11e7-a7e6-65daef496704"
+    },
+    "requestContext": {
+        "authorizer": {
+            "claims": {
+                "sub": "USER-SUB-1234"
+            }
+        }
+    }
+}
