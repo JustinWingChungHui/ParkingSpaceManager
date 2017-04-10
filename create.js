@@ -24,7 +24,8 @@ export async function main(event, context, callback) {
       address2: data.address2 ? data.address2 : null,
       city: data.city,
       postcode: data.postcode,
-      pictures: data.pictures,
+      featured_image: data.featured_image ? data.featured_image : null,
+      pictures: data.pictures ? data.pictures : null,
       createdAt: new Date().getTime(),
       updatedAt: new Date().getTime(),
       active: true

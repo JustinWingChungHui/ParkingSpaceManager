@@ -23,6 +23,7 @@ export async function main(event, context, callback) {
                         address2 = :address2,
                         city = :city,
                         postcode = :postcode,
+                        featured_image = :featured_image,
                         pictures = :pictures,
                         updatedAt = :updatedAt,
                         active = :active
@@ -34,6 +35,7 @@ export async function main(event, context, callback) {
       ':address2': data.address2 ? data.address2 : null,
       ':city': data.city ? data.city : null,
       ':postcode': data.postcode ? data.postcode : null,
+      ':featured_image': data.featured_image ? data.featured_image : null,
       ':pictures': data.pictures ? data.pictures : null,
       ':updatedAt': new Date().getTime(),
       ':active': data.active ? data.active : null

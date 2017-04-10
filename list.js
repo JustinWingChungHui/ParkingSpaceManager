@@ -1,17 +1,19 @@
+/** 
+ * Allows a user to list all their parking spaces they own
+*/
+
 import * as dynamoDbLib from './libs/dynamodb-lib';
 import { success, failure } from './libs/response-lib';
 
 export async function main(event, context, callback) {
   const params = {
-    TableName: 'notes',
-    // 'KeyConditionExpression' defines the condition for the query
-    // - 'userId = :userId': only return items with matching 'userId' partition key
-    // 'ExpressionAttributeValues' defines the value in the condition
-    // - ':userId': defines 'userId' to be User Pool sub of the authenticated user
+    TableName: 'parking_spaces',
+    IndexName: "userid-title-index",
     KeyConditionExpression: "userid = :userid",
     ExpressionAttributeValues: {
-      ":userid": event.requestContext.authorizer.claims.sub,
-    }
+      ":userid": event.requestContext.authorizer.claims.sub
+    },
+    ProjectionExpression: "id, userid, title, description, featured_image"
   };
 
   try {
