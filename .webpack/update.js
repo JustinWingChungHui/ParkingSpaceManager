@@ -81,7 +81,7 @@
 	              },
 	              // 'UpdateExpression' defines the attributes to be updated
 	              // 'ExpressionAttributeValues' defines the value in the update expression
-	              UpdateExpression: 'SET title = :title, \n                        description = :description,\n                        address1 = :address1,\n                        address2 = :address2,\n                        city = :city,\n                        postcode = :postcode,\n                        featured_image = :featured_image,\n                        pictures = :pictures,\n                        updatedAt = :updatedAt,\n                        active = :active\n                    ',
+	              UpdateExpression: 'SET title = :title, \n                        description = :description,\n                        address1 = :address1,\n                        address2 = :address2,\n                        city = :city,\n                        postcode = :postcode,\n                        featured_image = :featured_image,\n                        pictures = :pictures,\n                        updated = :updated,\n                        active = :active\n                    ',
 	              ExpressionAttributeValues: {
 	                ':title': data.title ? data.title : null,
 	                ':description': data.description ? data.description : null,
@@ -91,7 +91,7 @@
 	                ':postcode': data.postcode ? data.postcode : null,
 	                ':featured_image': data.featured_image ? data.featured_image : null,
 	                ':pictures': data.pictures ? data.pictures : null,
-	                ':updatedAt': new Date().getTime(),
+	                ':updated': new Date().getTime(),
 	                ':active': data.active ? data.active : null
 	              },
 	              ReturnValues: 'ALL_NEW'

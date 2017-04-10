@@ -25,7 +25,7 @@ export async function main(event, context, callback) {
                         postcode = :postcode,
                         featured_image = :featured_image,
                         pictures = :pictures,
-                        updatedAt = :updatedAt,
+                        updated = :updated,
                         active = :active
                     `,
     ExpressionAttributeValues: {
@@ -37,7 +37,7 @@ export async function main(event, context, callback) {
       ':postcode': data.postcode ? data.postcode : null,
       ':featured_image': data.featured_image ? data.featured_image : null,
       ':pictures': data.pictures ? data.pictures : null,
-      ':updatedAt': new Date().getTime(),
+      ':updated': new Date().getTime(),
       ':active': data.active ? data.active : null
     },
     ReturnValues: 'ALL_NEW',

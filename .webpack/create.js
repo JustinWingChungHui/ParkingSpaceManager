@@ -85,8 +85,8 @@
 	                postcode: data.postcode,
 	                featured_image: data.featured_image ? data.featured_image : null,
 	                pictures: data.pictures ? data.pictures : null,
-	                createdAt: new Date().getTime(),
-	                updatedAt: new Date().getTime(),
+	                created: new Date().getTime(),
+	                updated: new Date().getTime(),
 	                active: true
 	              }
 	            };
