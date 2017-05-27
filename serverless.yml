@@ -85,3 +85,4 @@ functions:
           authorizer:
             arn: arn:aws:cognito-idp:eu-west-2:525484755752:userpool/eu-west-2_borpxCBVE
 
+
